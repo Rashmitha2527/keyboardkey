@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 40%;
+            height: 40vh;
+        }
+        #one{
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 60%;
+            align-items: center;
+             border-radius: 10px;
+             box-shadow: 1px 1px 1px 1px rgb(217, 215, 215);
+             font-size: 20px;
+        }
+        .two{
+            color: rgb(91, 238, 91);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 100px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgb(223, 221, 221);
+            font-size: 50px;
+        }
+        .keyboardone{
+            color: rgb(70, 245, 70);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2 id="one">Press any key</h2>   
+    </div>
+ <script>
+    var container=document.getElementById("container");
+    var two=document.createElement("h1")
+    two.classList.add("two") 
+    window.addEventListener('keydown', (e)=>{
+           document.getElementById("one").innerHTML=`<h3 >You Pressed &nbsp; </h3>
+           <h3 class="keyboardone">${e.key}</h3>`
+            two.innerHTML = `${e.keyCode}`
+             container.appendChild(two)
+    })
+ </script>
+</body>
+</html>
