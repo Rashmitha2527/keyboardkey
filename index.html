@@ -42,7 +42,7 @@
             box-shadow: 2px 2px 2px 2px rgb(223, 221, 221);
             font-size: 50px;
         }
-        .keyboardone{
+        .keyboard{
             color: rgb(70, 245, 70);
         }
     </style>
@@ -57,7 +57,7 @@
     two.classList.add("two") 
     window.addEventListener('keydown', (e)=>{
            document.getElementById("one").innerHTML=`<h3 >You Pressed &nbsp; </h3>
-           <h3 class="keyboardone">${e.key}</h3>`
+           <h3 class="keyboard">${e.key}</h3>`
             two.innerHTML = `${e.keyCode}`
              container.appendChild(two)
     })
